@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Jacksons Compliment generator</title>
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                🐱
+                PROFESSOR JACKSONS COMPLIMENT GENERATOR
+                🐱
+            </h1>
+        </header>
+
+        <main>
+            <form id="complimentForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="nameInput" 
+                        name="name" 
+                        placeholder="Enter a name..." 
+                        required
+                    >
+                </div>
+
+                <div class="style-selection">
+                    <p>Choose a style:</p>
+                    <div class="style-buttons">
+                        <button type="button" class="style-btn" data-style="funny">
+                            <i class="lni lni-emoji-happy"></i>
+                            Funny
+                        </button>
+                        <button type="button" class="style-btn" data-style="sweet">
+                            <i class="lni lni-heart-filled"></i>
+                            Sweet
+                        </button>
+                        <button type="button" class="style-btn" data-style="hype">
+                            <i class="lni lni-fire"></i>
+                            Hype
+                        </button>
+                    </div>
+                    <input type="hidden" id="styleInput" name="style" value="funny">
+                </div>
+
+                <button type="submit" class="generate-btn">
+                    <i class="lni lni-star"></i>
+                    GENERATE
+                    <i class="lni lni-star"></i>
+                </button>
+            </form>
+
+            <div class="compliment-section">
+                <div id="complimentDisplay" class="compliment-box">
+                    <p>Your compliment appears here!</p>
+                </div>
+
+                <div class="voice-controls">
+                    <label for="voiceSelect" class="voice-label">Voice:</label>
+                    <select id="voiceSelect" class="voice-select">
+                        <option value="auto">Auto (Best Available)</option>
+                    </select>
+                </div>
+
+                <button id="speakBtn" class="speak-btn" disabled>
+                    <i class="lni lni-volume"></i>
+                    SPEAK
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

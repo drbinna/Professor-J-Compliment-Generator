@@ -1,0 +1,260 @@
+/* Compliment Generator - Black and White Minimal Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid #000000;
+    padding: 40px;
+    background-color: #FFFFFF;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+header h1 i {
+    margin: 0 10px;
+    color: #000000;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    color: #000000;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border: 3px solid #000000;
+}
+
+.style-selection {
+    text-align: center;
+}
+
+.style-selection p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.style-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.style-btn {
+    padding: 12px 24px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.style-btn:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.style-btn.active {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 3px solid #000000;
+}
+
+.style-btn i {
+    font-size: 18px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 18px;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.generate-btn:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.generate-btn:active {
+    transform: scale(0.98);
+}
+
+.compliment-section {
+    margin-top: 30px;
+    border-top: 2px solid #000000;
+    padding-top: 30px;
+}
+
+.compliment-box {
+    border: 2px solid #000000;
+    padding: 30px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+}
+
+.compliment-box p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.8;
+}
+
+.speak-btn {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.speak-btn:hover:not(:disabled) {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.speak-btn:disabled {
+    background-color: #CCCCCC;
+    color: #666666;
+    border-color: #CCCCCC;
+    cursor: not-allowed;
+}
+
+.speak-btn i {
+    font-size: 18px;
+}
+
+.voice-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.voice-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.voice-select {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    color: #000000;
+    outline: none;
+    cursor: pointer;
+}
+
+.voice-select:hover {
+    border: 3px solid #000000;
+}
+
+.voice-select:focus {
+    border: 3px solid #000000;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .style-buttons {
+        flex-direction: column;
+    }
+
+    .style-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
