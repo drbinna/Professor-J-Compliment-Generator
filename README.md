@@ -2,6 +2,8 @@
 
 A sleek black and white web app built with Python Flask that generates random compliments with text-to-speech functionality.
 
+**Live Demo:** https://professor-j-compliment-generator.vercel.app/
+
 ---
 
 ## Project Overview
